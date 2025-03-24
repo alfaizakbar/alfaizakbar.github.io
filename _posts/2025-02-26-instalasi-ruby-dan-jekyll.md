@@ -40,46 +40,45 @@ Berikut langkah-langkah untuk menginstal Ruby dan Jekyll di berbagai sistem oper
 
    ruby -v
 
-markdown
-Copy
-Edit
-untuk memastikan Ruby telah terinstal.
+   markdown
+   Copy
+   Edit
+   untuk memastikan Ruby telah terinstal.
 
 #### b) macOS
 1. Gunakan Homebrew untuk menginstal Ruby:
-brew install ruby
-
-markdown
-Copy
-Edit
+   brew install ruby
+   markdown
+   Copy
+   Edit
 2. Cek versi Ruby dengan:
-ruby -v
+   ruby -v
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 
 #### c) Linux (Ubuntu/Debian)
 1. Jalankan perintah berikut di terminal:
-sudo apt update sudo apt install ruby-full
+   sudo apt update sudo apt install ruby-full
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 2. Verifikasi instalasi dengan:
-ruby -v
+   ruby -v
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 
 ### 2. Instalasi Jekyll
 1. Setelah Ruby terinstal, jalankan perintah berikut untuk menginstal Jekyll dan Bundler:
-gem install jekyll bundler
+   gem install jekyll bundler
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 2. Pastikan Jekyll telah terinstal dengan:
 jekyll -v
 
@@ -89,23 +88,23 @@ Edit
 
 ### 3. Membuat dan Menjalankan Proyek Jekyll
 1. Buat proyek baru dengan Jekyll:
-jekyll new my-website
+   jekyll new my-website
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 2. Masuk ke direktori proyek:
-cd my-website
+   cd my-website
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 3. Jalankan server Jekyll:
-bundle exec jekyll serve
+   bundle exec jekyll serve
 
-markdown
-Copy
-Edit
+   markdown
+   Copy
+   Edit
 4. Buka browser dan akses `http://localhost:4000` untuk melihat hasilnya.
 
 ## Kesimpulan

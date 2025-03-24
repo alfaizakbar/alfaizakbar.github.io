@@ -294,45 +294,63 @@ h2 a:hover::after {
 }
 
 .post-wrapper {
-  margin-top: 2rem;
-  padding: 1rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
   border-left: 3px solid #4aa3df;
   background: rgba(0, 0, 0, 0.3);
-  margin: 1rem 2rem;
+  width: 90%;
   max-width: 800px;
-}
-.post-wrapper h2 {
-  color: #4aa3df;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .post-content {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding: 1rem;
   text-align: left;
-  color: white;
-  font-size: 1.1rem;
-  line-height: 1.8;
 }
-.post-content h2, .post-content h3 {
+.post-content h2 {
+  margin: 2.5rem 0 1.5rem;
   color: #4aa3df;
-  margin: 1.5rem 0 1rem;
 }
 .post-content h3 {
-  font-size: 1.4rem;
+  margin: 2rem 0 1rem;
+  color: #4aa3df;
 }
 .post-content p {
   margin-bottom: 1.5rem;
+  line-height: 1.8;
 }
 .post-content ul, .post-content ol {
-  margin-left: 2rem;
-  margin-bottom: 1.5rem;
-  list-style-position: outside;
+  margin: 1.5rem 0;
+  padding-left: 2rem;
 }
-.post-content li {
-  margin-bottom: 0.5rem;
+.post-content ul li, .post-content ol li {
+  margin-bottom: 0.8rem;
 }
-.post-content strong {
-  color: #4aa3df;
+.post-content pre {
+  margin: 1.5rem 0;
+}
+
+@media (max-width: 480px) {
+  .post-wrapper {
+    width: 92%;
+    padding: 1rem 0.8rem;
+    margin: 1rem auto;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+  }
+  .post-content {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .post-content h2, .post-content h3, .post-content p, .post-content ul, .post-content ol, .post-content pre, .post-content code {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    max-width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
