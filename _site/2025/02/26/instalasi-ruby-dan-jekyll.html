@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalasi Ruby dan Jekyll</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        </style>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav>
+    
+    <a href="/">HOME</a>
+    
+    <a href="/friends.html">FRIENDS</a>
+    
+    <a href="/blog.html">BLOG</a>
+    
+</nav>
+
+    <div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>Instalasi Ruby dan Jekyll</h2>
+            <div class="post-date">February 26, 2025</div>
+            <div class="post-content">
+                <h2 id="penjelasan-tentang-instalasi-ruby-dan-jekyll">Penjelasan tentang Instalasi Ruby dan Jekyll</h2>
+
+<p>Ruby dan Jekyll adalah dua teknologi yang digunakan dalam pengembangan website. Berikut adalah penjelasan lengkapnya:</p>
+
+<h3 id="apa-itu-ruby">Apa itu Ruby?</h3>
+<p>Ruby adalah bahasa pemrograman dinamis yang berfokus pada kesederhanaan dan produktivitas. Ruby memiliki sintaks yang elegan dan mudah dibaca, membuatnya menjadi pilihan populer untuk pengembangan web.</p>
+
+<h3 id="apa-itu-jekyll">Apa itu Jekyll?</h3>
+<p>Jekyll adalah generator situs statis yang ditulis dalam Ruby. Jekyll mengubah file teks biasa (seperti Markdown) menjadi website statis yang bisa di-host di mana saja.</p>
+
+<h3 id="keuntungan-menggunakan-jekyll">Keuntungan Menggunakan Jekyll:</h3>
+<ol>
+  <li><strong>Sederhana</strong>
+    <ul>
+      <li>Tidak memerlukan database</li>
+      <li>Tidak ada bahasa pemrograman kompleks</li>
+      <li>Mudah dipelajari</li>
+    </ul>
+  </li>
+  <li><strong>Cepat</strong>
+    <ul>
+      <li>Website statis lebih cepat loading</li>
+      <li>Tidak memerlukan proses server-side</li>
+      <li>Hosting lebih mudah</li>
+    </ul>
+  </li>
+  <li><strong>Aman</strong>
+    <ul>
+      <li>Tidak ada database yang bisa diretas</li>
+      <li>Tidak ada sistem login yang rentan</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="instalasi-ruby-dan-jekyll">Instalasi Ruby dan Jekyll</h2>
+
+<p>Berikut langkah-langkah untuk menginstal Ruby dan Jekyll di berbagai sistem operasi:</p>
+
+<h3 id="1-instalasi-ruby">1. Instalasi Ruby</h3>
+<h4 id="a-windows">a) Windows</h4>
+<ol>
+  <li>Unduh dan instal <a href="https://rubyinstaller.org/">RubyInstaller</a>.</li>
+  <li>Pilih versi yang menyertakan DevKit.</li>
+  <li>
+    <p>Setelah instalasi, buka Command Prompt dan jalankan:</p>
+
+    <p>ruby -v</p>
+  </li>
+</ol>
+
+<p>markdown
+Copy
+Edit
+untuk memastikan Ruby telah terinstal.</p>
+
+<h4 id="b-macos">b) macOS</h4>
+<ol>
+  <li>Gunakan Homebrew untuk menginstal Ruby:
+brew install ruby</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Cek versi Ruby dengan:
+ruby -v</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+
+<h4 id="c-linux-ubuntudebian">c) Linux (Ubuntu/Debian)</h4>
+<ol>
+  <li>Jalankan perintah berikut di terminal:
+sudo apt update sudo apt install ruby-full</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Verifikasi instalasi dengan:
+ruby -v</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+
+<h3 id="2-instalasi-jekyll">2. Instalasi Jekyll</h3>
+<ol>
+  <li>Setelah Ruby terinstal, jalankan perintah berikut untuk menginstal Jekyll dan Bundler:
+gem install jekyll bundler</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Pastikan Jekyll telah terinstal dengan:
+jekyll -v</li>
+</ol>
+
+<p>shell
+Copy
+Edit</p>
+
+<h3 id="3-membuat-dan-menjalankan-proyek-jekyll">3. Membuat dan Menjalankan Proyek Jekyll</h3>
+<ol>
+  <li>Buat proyek baru dengan Jekyll:
+jekyll new my-website</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Masuk ke direktori proyek:
+cd my-website</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Jalankan server Jekyll:
+bundle exec jekyll serve</li>
+</ol>
+
+<p>markdown
+Copy
+Edit</p>
+<ol>
+  <li>Buka browser dan akses <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> untuk melihat hasilnya.</li>
+</ol>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>Ruby dan Jekyll adalah kombinasi yang kuat untuk membuat website statis yang cepat, aman, dan mudah di-host. Dengan langkah-langkah di atas, Anda dapat dengan mudah memulai proyek Jekyll dan mengelola website statis Anda.</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+    </script>
+</html>

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>{{ page.title }}</h2>
+            <div class="post-date">{{ page.date | date: "%B %d, %Y" }}</div>
+            <div class="post-content">
+                {{ content }}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkDown HTML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        </style>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav>
+    
+    <a href="/">HOME</a>
+    
+    <a href="/friends.html">FRIENDS</a>
+    
+    <a href="/blog.html">BLOG</a>
+    
+</nav>
+
+    <div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>MarkDown HTML</h2>
+            <div class="post-date">March 06, 2025</div>
+            <div class="post-content">
+                <h2 id="penjelasan-markdown">Penjelasan Markdown</h2>
+
+<p>Markdown adalah bahasa markup ringan yang memudahkan penulisan konten dengan format yang mudah dibaca. Berikut adalah elemen-elemen dasar Markdown:</p>
+
+<h2 id="1-header">1. Header</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Heading 1</span>
+<span class="gu">## Heading 2</span>
+<span class="gu">### Heading 3</span>
+<span class="gu">#### Heading 4</span>
+<span class="gu">##### Heading 5</span>
+<span class="gu">###### Heading 6</span>
+
+</code></pre></div></div>
+<h2 id="2-penekanan-teks">2. Penekanan Teks</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">*Teks miring*</span>
+<span class="ge">_Teks miring_</span>
+<span class="gs">**Teks tebal**</span>
+<span class="gs">__Teks tebal__</span>
+<span class="ges">***Teks miring dan tebal***</span>
+</code></pre></div></div>
+
+<h2 id="3-lists">3. Lists</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">  -</span> Sub-item 2.1
+<span class="p">  -</span> Sub-item 2.2
+<span class="p">
+1.</span> Item Pertama
+<span class="p">2.</span> Item Kedua
+<span class="p">   1.</span> Sub-item 2.1
+<span class="p">   2.</span> Sub-item 2.2
+</code></pre></div></div>
+
+<h2 id="4-links-dan-images">4. Links dan Images</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Teks Link</span><span class="p">](</span><span class="sx">https://www.example.com</span><span class="p">)</span>
+<span class="p">![</span><span class="nv">Teks Alternatif</span><span class="p">](</span><span class="sx">path/to/image.jpg</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="5-blockquote">5. Blockquote</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; Ini adalah blockquote.</span>
+<span class="gt">&gt; Bisa multi-line</span>
+</code></pre></div></div>
+
+<h2 id="6-kode">6. Kode</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'kode inline'
+
+<span class="p">```</span><span class="nl">python
+</span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="7-tables">7. Tables</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Header 1 | Header 2 |
+|----------|----------|
+| Baris 1  | Data 1   |
+| Baris 2  | Data 2   |
+</code></pre></div></div>
+
+<h2 id="8-horizontal-rules">8. Horizontal Rules</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">---</span>
+<span class="p">***</span>
+<span class="ge">__</span>_
+</code></pre></div></div>
+
+<h2 id="penggunaan-dalam-jekyll">Penggunaan dalam jekyll</h2>
+<p>Jekyll Menggunakan Markdown untuk membuat konten website. Berikut adalah cara menggunakan Markdown dalam Jekyll:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Judul</span><span class="nv"> </span><span class="s">Post"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2023-09-10</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<h3 id="fitur-tambahan-jekyll-markdown">Fitur Tambahan jekyll Markdown</h3>
+<ol>
+  <li>Liquid Tags
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
+{% include file.html %}
+{{ page.title }}
+    
+</code></pre></div>    </div>
+  </li>
+  <li>Costum Classes
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .nama-class}
+</code></pre></div>    </div>
+  </li>
+  <li>Footnotes
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Teks dengan footnote[^1]
+<span class="p">[</span><span class="ss">^1</span><span class="p">]:</span> <span class="sx">Ini</span> adalah footnote.
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+    </script>
+</html>

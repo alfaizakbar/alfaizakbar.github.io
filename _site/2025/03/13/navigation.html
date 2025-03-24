@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        </style>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav>
+    
+    <a href="/">HOME</a>
+    
+    <a href="/friends.html">FRIENDS</a>
+    
+    <a href="/blog.html">BLOG</a>
+    
+</nav>
+
+    <div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>Navigation</h2>
+            <div class="post-date">March 13, 2025</div>
+            <div class="post-content">
+                <h2 id="penjelasan-tentang-navigation">Penjelasan tentang Navigation.</h2>
+
+<p>Navigation pada Ruby (Jekyll) adalah cara untuk membuat menu navigasi di website. Berikut adalah penjelasan lengkapnya:</p>
+
+<h3 id="1-data-navigation">1. Data Navigation</h3>
+<p>Navigation dapat dibuat menggunakan file <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/about</span>
+</code></pre></div></div>
+
+<h3 id="2-impelementasi-navigation">2. Impelementasi Navigation</h3>
+<p>Cara Mengeimplementasikan navigation di layout:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>
+      HOME
+    <span class="nt">&lt;/a&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/friends.html"</span> <span class="nt">&gt;</span>
+      FRIENDS
+    <span class="nt">&lt;/a&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog.html"</span> <span class="nt">&gt;</span>
+      BLOG
+    <span class="nt">&lt;/a&gt;</span>
+  
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h3 id="3-styling-navigation">3. Styling Navigation</h3>
+<p>Css Untuk Styling Navigation:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f8f9fa</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">a</span><span class="nc">.current</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="4-jenis-jenis-navigation">4. Jenis-jenis Navigation</h3>
+<ul>
+  <li><strong>1. Top Navigation</strong>:
+    <ul>
+      <li>Menu Navigasi di bagian atas Website.</li>
+      <li>Cocok untuk website dengan struktur sederhana.</li>
+    </ul>
+  </li>
+  <li><strong>2. Sidebar Navigation</strong>:
+    <ul>
+      <li>Menu navigasi di bagian atas website.</li>
+      <li>Ideal untuk dokumentasi atau website dengan banyak halaman.</li>
+    </ul>
+  </li>
+  <li><strong>3. Dropdown Navigation</strong>:
+    <ul>
+      <li>Menu navigasi yang memiliki sub-menu.</li>
+      <li>Cocok untuk website dengan banyak halaman dan sub-menu.
+Contoh Penerapannya:
+```yaml</li>
+      <li>name: Products
+link: /products
+subnav:
+        <ul>
+          <li>name: Category 1
+link: /products/cat1</li>
+          <li>name: Category 2
+link: /products/cat2
+```</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-best-practices">5. Best Practices</h3>
+<ul>
+  <li>Gunakan Navigation yang mudah dibaca.</li>
+  <li>Gunakan Navigation yang sesuai dengan struktur website.</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+    </script>
+</html>
