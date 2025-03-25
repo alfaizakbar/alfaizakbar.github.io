@@ -25,7 +25,47 @@
     <div class="hero-content">
         <h2 class="greeting">Hi there, my name is</h2>
         <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1>
-        <p class="tagline">and I leverage <span class="highlight">Software Engineering</span> to achieve sustainable growth.</p>
+<p class="tagline"><span class="typed-text"></span></p>
+
+<script>
+    const typedTextSpan = document.querySelector(".typed-text");
+    const phrases = [
+        "Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer",
+        "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak",
+        "Cita Cita saya Ingin Menjadi Programmer",
+        "Hobi saya Ngoding"
+    ];
+    
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function type() {
+        const currentPhrase = phrases[phraseIndex];
+        
+        if (isDeleting) {
+            typedTextSpan.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typedTextSpan.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+        }
+
+        if (!isDeleting && charIndex === currentPhrase.length) {
+            isDeleting = true;
+            setTimeout(type, 1000); // Reduced from 2000 to 1000 - pause at end of phrase
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(type, 300); // Reduced from 500 to 300 - pause before next phrase
+        } else {
+            setTimeout(type, isDeleting ? 50 : 100); // Reduced from 100/200 to 50/100 - typing speed
+        }
+    }
+
+    // Start the typing animation when page loads
+    window.onload = type;
+</script>
         <!-- kata kata from Taylor Vowell -->
     </div>
 </div>
