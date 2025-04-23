@@ -3,33 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title><%= site["title"] %></title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        @import url('<%= site["font"] %>');
     </style>
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= site["favicon"] %>">
+    <link rel="stylesheet" href="<%= site["css"] %>">
 </head>
 <body>
     <nav>
-    
-        <a href="/" class="current">HOME</a>
-    
-        <a href="/friends.html" >FRIENDS</a>
-    
-        <a href="/blog.html" >BLOG</a>
-    
+    <% nav.each do |item| %>
+        <a href="<%= item["link"] %>" <%= item["current"] ? 'class="current"' : '' %>><%= item["name"] %></a>
+    <% end %>
     </nav>
 
     <div class="hero-container">
         <div class="hero-content">
-            <h2 class="greeting">Hi there, my name is</h2>
-            <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1> 
+            <h2 class="greeting"><%= author["greeting"] %></h2>
+            <h1 class="name"><%= author["first_name"] %> <span class="last_name"><%= author["last_name"] %></span></h1> 
             <p class="tagline"><span class="typed-text"></span></p>
 
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
-    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer","Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak","Cita Cita saya Ingin Menjadi Programmer","Hobi saya Ngoding"];
+    const phrases = <%= author["tagline"].to_json %>;
 
     let phraseIndex = 0;
     let charIndex = 0;

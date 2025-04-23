@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Config.YML</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        </style>
+    <link rel="shortcut icon" type="image/x-icon" href="">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+    <nav>
+    
+    <a href="/">HOME</a>
+    
+    <a href="/friends.html">FRIENDS</a>
+    
+    <a href="/blog.html">BLOG</a>
+    
+</nav>
+
+    <div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>Config.YML</h2>
+            <div class="post-date">April 18, 2025</div>
+            <div class="post-content">
+                <h2 id="penjelasan-configyml">Penjelasan Config.yml</h2>
+
+<p>File config.yml berfungsi sebagai sumber konfigurasi utama yang memuat informasi penting mengenai situs web yang akan ditampilkan. File ini memungkinkan pemisahan antara data dan tampilan (template), sehingga mempermudah proses pengelolaan dan pembaruan konten tanpa harus mengubah struktur HTML secara langsung.</p>
+
+<p>Adapun isi dari config.yml dibagi ke dalam beberapa bagian utama, yaitu:</p>
+
+<h3 id="site">site</h3>
+<p>Menyimpan informasi dasar mengenai situs seperti:</p>
+<ul>
+  <li>Judul halaman (title)</li>
+  <li>URL favicon</li>
+  <li>Link ke file CSS eksternal</li>
+  <li>Link ke font dari Google Fonts</li>
+</ul>
+
+<h3 id="author">author</h3>
+<p>Menyimpan data personal pemilik situs:</p>
+<ul>
+  <li>Nama depan dan belakang</li>
+  <li>Kalimat sapaan atau pembuka (greeting)</li>
+  <li>Daftar kalimat dinamis yang digunakan sebagai tagline dalam animasi teks</li>
+</ul>
+
+<h3 id="nav">nav</h3>
+<p>Daftar menu navigasi yang akan ditampilkan di bagian atas halaman:</p>
+<ul>
+  <li>Nama item navigasi (name)</li>
+  <li>Tautan tujuan (link)</li>
+  <li>Penanda halaman aktif (current)</li>
+</ul>
+
+<h3 id="contoh-struktur-configyml">Contoh Struktur Config.yml</h3>
+
+<p>Struktur config.yml</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>site:
+  title: "Home"
+  favicon: "/assets/images/favicon.ico"
+  css: "/assets/css/styles.css"
+  font: "https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900<span class="err">&amp;</span>display=swap"
+
+author:
+  first_name: "AL FAIZ AKBAR"
+  last_name: "THAIB"
+  greeting: "Hi there, my name is"
+  tagline:
+    - "Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer"
+    - "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak"
+    - "Cita Cita saya Ingin Menjadi Programmer"
+    - "Hobi saya Ngoding"
+
+nav:
+  - name: "HOME"
+    link: "/"
+    current: true
+  - name: "FRIENDS"
+    link: "/friends.html"
+  - name: "BLOG"
+    link: "/blog.html"
+</code></pre></div></div>
+<h3 id="contoh-penerapan-di-template-templateerb">Contoh Penerapan di Template (template.erb)</h3>
+<h4 id="bagian-nama-di-html-">Bagian Nama Di HTML :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">author</span><span class="err">["</span><span class="na">first_name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"last_name"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">author</span><span class="err">["</span><span class="na">last_name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;&lt;/span&gt;&lt;/h1&gt;</span>
+</code></pre></div></div>
+<h4 id="bagian-menu-navigasi-">Bagian Menu navigasi :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%</span> <span class="na">nav.each</span> <span class="na">do</span> <span class="err">|</span><span class="na">item</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"&lt;%= item["</span><span class="na">link</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;</span>" <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">["</span><span class="na">current</span><span class="err">"]</span> <span class="err">?</span> <span class="err">'</span><span class="na">class=</span><span class="s">"current"</span><span class="err">'</span> <span class="na">:</span> <span class="err">''</span> <span class="err">%</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">["</span><span class="na">name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<h4 id="bagian-tagline-animasi-dengan-javascript-">Bagian tagline animasi (dengan JavaScript) :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="kd">const</span> <span class="nx">phrases</span> <span class="o">=</span> <span class="o">&lt;%=</span> <span class="nx">author</span><span class="p">[</span><span class="dl">"</span><span class="s2">tagline</span><span class="dl">"</span><span class="p">].</span><span class="nx">to_json</span> <span class="o">%&gt;</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script>
+    window.addEventListener('scroll', function() {
+        const nav = document.querySelector('nav');
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+    </script>
+</html>

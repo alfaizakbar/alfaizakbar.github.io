@@ -6,43 +6,38 @@
     <title>Home</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
-        </style>
-    <link rel="shortcut icon" type="image/x-icon" href="">
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
     <nav>
     
-    <a href="/"class="current">HOME</a>
+        <a href="/" class="current">HOME</a>
     
-    <a href="/friends.html">FRIENDS</a>
+        <a href="/friends.html" >FRIENDS</a>
     
-    <a href="/blog.html">BLOG</a>
+        <a href="/blog.html" >BLOG</a>
     
-</nav>
+    </nav>
 
     <div class="hero-container">
-    <div class="hero-content">
-        <h2 class="greeting">Hi there, my name is</h2>
-        <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1>
-<p class="tagline"><span class="typed-text"></span></p>
+        <div class="hero-content">
+            <h2 class="greeting">Hi there, my name is</h2>
+            <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1> 
+            <p class="tagline"><span class="typed-text"></span></p>
 
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
-    const phrases = [
-        "Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer",
-        "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak",
-        "Cita Cita saya Ingin Menjadi Programmer",
-        "Hobi saya Ngoding"
-    ];
-    
+    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer","Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak","Cita Cita saya Ingin Menjadi Programmer","Hobi saya Ngoding"];
+
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
 
     function type() {
         const currentPhrase = phrases[phraseIndex];
-        
+
         if (isDeleting) {
             typedTextSpan.textContent = currentPhrase.substring(0, charIndex - 1);
             charIndex--;
@@ -53,26 +48,20 @@
 
         if (!isDeleting && charIndex === currentPhrase.length) {
             isDeleting = true;
-            setTimeout(type, 1000); // Reduced from 2000 to 1000 - pause at end of phrase
+            setTimeout(type, 1000);
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
-            setTimeout(type, 300); // Reduced from 500 to 300 - pause before next phrase
+            setTimeout(type, 300);
         } else {
-            setTimeout(type, isDeleting ? 50 : 100); // Reduced from 100/200 to 50/100 - typing speed
+            setTimeout(type, isDeleting ? 50 : 100);
         }
     }
 
-    // Start the typing animation when page loads
     window.onload = type;
 </script>
-        <!-- kata kata from Taylor Vowell -->
+        </div>
     </div>
-</div>
-
-
-    
-    
 </body>
 <script>
     window.addEventListener('scroll', function() {
@@ -83,5 +72,5 @@
             nav.classList.remove('scrolled');
         }
     });
-    </script>
+</script>
 </html>
