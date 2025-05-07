@@ -2,7 +2,7 @@ require 'yaml'
 require 'erb'
 require 'json'
 
-config = YAML.load_file('config.yml')
+config = YAML.load_file('_config.yml')
 template = File.read('template.erb')
 erb = ERB.new(template)
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Friends
+title: FRIENDS
 ---
 
 <div class="hero-container friends-container">

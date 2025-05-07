@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-07T21:12:32+07:00</updated><id>http://localhost:4000/feed.xml</id><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><entry><title type="html">Config.YML</title><link href="http://localhost:4000/2025/04/18/config-yml" rel="alternate" type="text/html" title="Config.YML" /><published>2025-04-18T00:00:00+07:00</published><updated>2025-04-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/18/config-yml</id><content type="html" xml:base="http://localhost:4000/2025/04/18/config-yml"><![CDATA[<h2 id="penjelasan-configyml">Penjelasan Config.yml</h2>
+
+<p>File config.yml berfungsi sebagai sumber konfigurasi utama yang memuat informasi penting mengenai situs web yang akan ditampilkan. File ini memungkinkan pemisahan antara data dan tampilan (template), sehingga mempermudah proses pengelolaan dan pembaruan konten tanpa harus mengubah struktur HTML secara langsung.</p>
+
+<p>Adapun isi dari config.yml dibagi ke dalam beberapa bagian utama, yaitu:</p>
+
+<h3 id="site">site</h3>
+<p>Menyimpan informasi dasar mengenai situs seperti:</p>
+<ul>
+  <li>Judul halaman (title)</li>
+  <li>URL favicon</li>
+  <li>Link ke file CSS eksternal</li>
+  <li>Link ke font dari Google Fonts</li>
+</ul>
+
+<h3 id="author">author</h3>
+<p>Menyimpan data personal pemilik situs:</p>
+<ul>
+  <li>Nama depan dan belakang</li>
+  <li>Kalimat sapaan atau pembuka (greeting)</li>
+  <li>Daftar kalimat dinamis yang digunakan sebagai tagline dalam animasi teks</li>
+</ul>
+
+<h3 id="nav">nav</h3>
+<p>Daftar menu navigasi yang akan ditampilkan di bagian atas halaman:</p>
+<ul>
+  <li>Nama item navigasi (name)</li>
+  <li>Tautan tujuan (link)</li>
+  <li>Penanda halaman aktif (current)</li>
+</ul>
+
+<h3 id="contoh-struktur-configyml">Contoh Struktur Config.yml</h3>
+
+<p>Struktur config.yml</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>site:
+  title: "Home"
+  favicon: "/assets/images/favicon.ico"
+  css: "/assets/css/styles.css"
+  font: "https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900<span class="err">&amp;</span>display=swap"
+
+author:
+  first_name: "AL FAIZ AKBAR"
+  last_name: "THAIB"
+  greeting: "Hi there, my name is"
+  tagline:
+    - "Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer"
+    - "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak"
+    - "Cita Cita saya Ingin Menjadi Programmer"
+    - "Hobi saya Ngoding"
+
+nav:
+  - name: "HOME"
+    link: "/"
+    current: true
+  - name: "FRIENDS"
+    link: "/friends.html"
+  - name: "BLOG"
+    link: "/blog.html"
+</code></pre></div></div>
+<h3 id="contoh-penerapan-di-template-templateerb">Contoh Penerapan di Template (template.erb)</h3>
+<h4 id="bagian-nama-di-html-">Bagian Nama Di HTML :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">author</span><span class="err">["</span><span class="na">first_name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;</span> <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"last_name"</span><span class="nt">&gt;&lt;</span><span class="err">%=</span> <span class="na">author</span><span class="err">["</span><span class="na">last_name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;&lt;/span&gt;&lt;/h1&gt;</span>
+</code></pre></div></div>
+<h4 id="bagian-menu-navigasi-">Bagian Menu navigasi :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;</span><span class="err">%</span> <span class="na">nav.each</span> <span class="na">do</span> <span class="err">|</span><span class="na">item</span><span class="err">|</span> <span class="err">%</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"&lt;%= item["</span><span class="na">link</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;</span>" <span class="nt">&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">["</span><span class="na">current</span><span class="err">"]</span> <span class="err">?</span> <span class="err">'</span><span class="na">class=</span><span class="s">"current"</span><span class="err">'</span> <span class="na">:</span> <span class="err">''</span> <span class="err">%</span><span class="nt">&gt;</span>&gt;<span class="nt">&lt;</span><span class="err">%=</span> <span class="na">item</span><span class="err">["</span><span class="na">name</span><span class="err">"]</span> <span class="err">%</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;</span><span class="err">%</span> <span class="na">end</span> <span class="err">%</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+<h4 id="bagian-tagline-animasi-dengan-javascript-">Bagian tagline animasi (dengan JavaScript) :</h4>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script&gt;</span>
+  <span class="kd">const</span> <span class="nx">phrases</span> <span class="o">=</span> <span class="o">&lt;%=</span> <span class="nx">author</span><span class="p">[</span><span class="dl">"</span><span class="s2">tagline</span><span class="dl">"</span><span class="p">].</span><span class="nx">to_json</span> <span class="o">%&gt;</span><span class="p">;</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan Config.yml]]></summary></entry><entry><title type="html">HTML Link dan Lists</title><link href="http://localhost:4000/2025/03/20/html-link-dan-lists" rel="alternate" type="text/html" title="HTML Link dan Lists" /><published>2025-03-20T00:00:00+07:00</published><updated>2025-03-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/20/html-link-dan-lists</id><content type="html" xml:base="http://localhost:4000/2025/03/20/html-link-dan-lists"><![CDATA[<h2 id="penjelasan-tentang-link-dan-lists-pada-html">Penjelasan tentang link dan lists pada HTML.</h2>
+
+<p>Dalam Html, Link dan Lists adalah elemen yang sering digunakan untuk navigasi dan pengorganisasian konten. Berikut adalah Penjelasannya:</p>
+<ol>
+  <li><strong>Link dalam HTML</strong>
+Link dalam HTML digunakan untuk menghubungkan satu halaman web dengan halaman web lain. Link dapat dibuat dengan menggunakan tag <code class="language-plaintext highlighter-rouge">&lt;a&gt;</code> dan atribut <code class="language-plaintext highlighter-rouge">href</code>. Atribut <code class="language-plaintext highlighter-rouge">href</code> digunakan untuk menentukan URL tujuan link. Contoh:
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.example.com"</span><span class="nt">&gt;</span>Klik disini untuk mengunjungi website<span class="nt">&lt;/a&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"halaman2.html"</span><span class="nt">&gt;</span>Pergi ke halaman 2<span class="nt">&lt;/a&gt;</span>
+     <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"mailto:email@example.com"</span><span class="nt">&gt;</span>Kirim email<span class="nt">&lt;/a&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p><strong>Lists dalam HTML</strong>
+Lists dalam HTML digunakan untuk mengorganisir konten menjadi daftar. Ada dua jenis lists dalam HTML:</p>
+
+    <p>a. <strong>Unordered Lists (UL)</strong>
+ Unordered lists menggunakan bullet points untuk menandai setiap item. Dibuat menggunakan tag <code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code> dan <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code>. Contoh:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nt">&lt;ul&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Apel<span class="nt">&lt;/li&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Jeruk<span class="nt">&lt;/li&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Mangga<span class="nt">&lt;/li&gt;</span>
+     <span class="nt">&lt;/ul&gt;</span>
+</code></pre></div>    </div>
+    <p>b. <strong>Ordered Lists (OL)</strong>
+ Ordered lists menggunakan angka atau huruf untuk menandai setiap item. Dibuat menggunakan tag <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code> dan <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code>. Contoh:</p>
+
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     <span class="nt">&lt;ol&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Belajar HTML<span class="nt">&lt;/li&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Belajar CSS<span class="nt">&lt;/li&gt;</span>
+         <span class="nt">&lt;li&gt;</span>Belajar JavaScript<span class="nt">&lt;/li&gt;</span>
+     <span class="nt">&lt;/ol&gt;</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<!-- ![HTML link dan List](/assets/images/Lettering%20C++_Java%20Sript_CSS%20and%20laptop%20with%20program%20code%20text.jpeg){:height="400px" width="400px"} -->]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan tentang link dan lists pada HTML.]]></summary></entry><entry><title type="html">Navigation</title><link href="http://localhost:4000/2025/03/13/navigation" rel="alternate" type="text/html" title="Navigation" /><published>2025-03-13T00:00:00+07:00</published><updated>2025-03-13T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/13/navigation</id><content type="html" xml:base="http://localhost:4000/2025/03/13/navigation"><![CDATA[<h2 id="penjelasan-tentang-navigation">Penjelasan tentang Navigation.</h2>
+
+<p>Navigation pada Ruby (Jekyll) adalah cara untuk membuat menu navigasi di website. Berikut adalah penjelasan lengkapnya:</p>
+
+<h3 id="1-data-navigation">1. Data Navigation</h3>
+<p>Navigation dapat dibuat menggunakan file <code class="language-plaintext highlighter-rouge">_data/navigation.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Home</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Blog</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/blog</span>
+<span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">About</span>
+  <span class="na">link</span><span class="pi">:</span> <span class="s">/about</span>
+</code></pre></div></div>
+
+<h3 id="2-impelementasi-navigation">2. Impelementasi Navigation</h3>
+<p>Cara Mengeimplementasikan navigation di layout:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/"</span> <span class="nt">&gt;</span>
+      HOME
+    <span class="nt">&lt;/a&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/friends.html"</span> <span class="nt">&gt;</span>
+      FRIENDS
+    <span class="nt">&lt;/a&gt;</span>
+  
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/blog.html"</span> <span class="nt">&gt;</span>
+      BLOG
+    <span class="nt">&lt;/a&gt;</span>
+  
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h3 id="3-styling-navigation">3. Styling Navigation</h3>
+<p>Css Untuk Styling Navigation:</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f8f9fa</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="m">#333</span><span class="p">;</span>
+    <span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nl">margin-right</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">nav</span> <span class="nt">a</span><span class="nc">.current</span> <span class="p">{</span>
+    <span class="nl">color</span><span class="p">:</span> <span class="no">green</span><span class="p">;</span>
+    <span class="nl">font-weight</span><span class="p">:</span> <span class="nb">bold</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="4-jenis-jenis-navigation">4. Jenis-jenis Navigation</h3>
+<ul>
+  <li><strong>1. Top Navigation</strong>:
+    <ul>
+      <li>Menu Navigasi di bagian atas Website.</li>
+      <li>Cocok untuk website dengan struktur sederhana.</li>
+    </ul>
+  </li>
+  <li><strong>2. Sidebar Navigation</strong>:
+    <ul>
+      <li>Menu navigasi di bagian atas website.</li>
+      <li>Ideal untuk dokumentasi atau website dengan banyak halaman.</li>
+    </ul>
+  </li>
+  <li><strong>3. Dropdown Navigation</strong>:
+    <ul>
+      <li>Menu navigasi yang memiliki sub-menu.</li>
+      <li>Cocok untuk website dengan banyak halaman dan sub-menu.
+Contoh Penerapannya:
+```yaml</li>
+      <li>name: Products
+link: /products
+subnav:
+        <ul>
+          <li>name: Category 1
+link: /products/cat1</li>
+          <li>name: Category 2
+link: /products/cat2
+```</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="5-best-practices">5. Best Practices</h3>
+<ul>
+  <li>Gunakan Navigation yang mudah dibaca.</li>
+  <li>Gunakan Navigation yang sesuai dengan struktur website.</li>
+</ul>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan tentang Navigation.]]></summary></entry><entry><title type="html">MarkDown HTML</title><link href="http://localhost:4000/2025/03/06/markdown" rel="alternate" type="text/html" title="MarkDown HTML" /><published>2025-03-06T00:00:00+07:00</published><updated>2025-03-06T00:00:00+07:00</updated><id>http://localhost:4000/2025/03/06/markdown</id><content type="html" xml:base="http://localhost:4000/2025/03/06/markdown"><![CDATA[<h2 id="penjelasan-markdown">Penjelasan Markdown</h2>
+
+<p>Markdown adalah bahasa markup ringan yang memudahkan penulisan konten dengan format yang mudah dibaca. Berikut adalah elemen-elemen dasar Markdown:</p>
+
+<h2 id="1-header">1. Header</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Heading 1</span>
+<span class="gu">## Heading 2</span>
+<span class="gu">### Heading 3</span>
+<span class="gu">#### Heading 4</span>
+<span class="gu">##### Heading 5</span>
+<span class="gu">###### Heading 6</span>
+
+</code></pre></div></div>
+<h2 id="2-penekanan-teks">2. Penekanan Teks</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ge">*Teks miring*</span>
+<span class="ge">_Teks miring_</span>
+<span class="gs">**Teks tebal**</span>
+<span class="gs">__Teks tebal__</span>
+<span class="ges">***Teks miring dan tebal***</span>
+</code></pre></div></div>
+
+<h2 id="3-lists">3. Lists</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">  -</span> Sub-item 2.1
+<span class="p">  -</span> Sub-item 2.2
+<span class="p">
+1.</span> Item Pertama
+<span class="p">2.</span> Item Kedua
+<span class="p">   1.</span> Sub-item 2.1
+<span class="p">   2.</span> Sub-item 2.2
+</code></pre></div></div>
+
+<h2 id="4-links-dan-images">4. Links dan Images</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Teks Link</span><span class="p">](</span><span class="sx">https://www.example.com</span><span class="p">)</span>
+<span class="p">![</span><span class="nv">Teks Alternatif</span><span class="p">](</span><span class="sx">path/to/image.jpg</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="5-blockquote">5. Blockquote</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; Ini adalah blockquote.</span>
+<span class="gt">&gt; Bisa multi-line</span>
+</code></pre></div></div>
+
+<h2 id="6-kode">6. Kode</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'kode inline'
+
+<span class="p">```</span><span class="nl">python
+</span><span class="k">def</span> <span class="nf">hello</span><span class="p">():</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Hello, World!</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="7-tables">7. Tables</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>| Header 1 | Header 2 |
+|----------|----------|
+| Baris 1  | Data 1   |
+| Baris 2  | Data 2   |
+</code></pre></div></div>
+
+<h2 id="8-horizontal-rules">8. Horizontal Rules</h2>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">---</span>
+<span class="p">***</span>
+<span class="ge">__</span>_
+</code></pre></div></div>
+
+<h2 id="penggunaan-dalam-jekyll">Penggunaan dalam jekyll</h2>
+<p>Jekyll Menggunakan Markdown untuk membuat konten website. Berikut adalah cara menggunakan Markdown dalam Jekyll:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Judul</span><span class="nv"> </span><span class="s">Post"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">2023-09-10</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<h3 id="fitur-tambahan-jekyll-markdown">Fitur Tambahan jekyll Markdown</h3>
+<ol>
+  <li>Liquid Tags
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    
+{% include file.html %}
+{{ page.title }}
+    
+</code></pre></div>    </div>
+  </li>
+  <li>Costum Classes
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{: .nama-class}
+</code></pre></div>    </div>
+  </li>
+  <li>Footnotes
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Teks dengan footnote[^1]
+<span class="p">[</span><span class="ss">^1</span><span class="p">]:</span> <span class="sx">Ini</span> adalah footnote.
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan Markdown]]></summary></entry><entry><title type="html">Instalasi Ruby dan Jekyll</title><link href="http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll" rel="alternate" type="text/html" title="Instalasi Ruby dan Jekyll" /><published>2025-02-20T00:00:00+07:00</published><updated>2025-02-20T00:00:00+07:00</updated><id>http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll</id><content type="html" xml:base="http://localhost:4000/2025/02/20/instalasi-ruby-dan-jekyll"><![CDATA[<h2 id="penjelasan-tentang-instalasi-ruby-dan-jekyll">Penjelasan tentang Instalasi Ruby dan Jekyll</h2>
+
+<p>Ruby dan Jekyll adalah dua teknologi yang digunakan dalam pengembangan website. Berikut adalah penjelasan lengkapnya:</p>
+
+<h3 id="apa-itu-ruby">Apa itu Ruby?</h3>
+<p>Ruby adalah bahasa pemrograman dinamis yang berfokus pada kesederhanaan dan produktivitas. Ruby memiliki sintaks yang elegan dan mudah dibaca, membuatnya menjadi pilihan populer untuk pengembangan web.</p>
+
+<h3 id="apa-itu-jekyll">Apa itu Jekyll?</h3>
+<p>Jekyll adalah generator situs statis yang ditulis dalam Ruby. Jekyll mengubah file teks biasa (seperti Markdown) menjadi website statis yang bisa di-host di mana saja.</p>
+
+<h3 id="keuntungan-menggunakan-jekyll">Keuntungan Menggunakan Jekyll:</h3>
+<ol>
+  <li><strong>Sederhana</strong>
+    <ul>
+      <li>Tidak memerlukan database</li>
+      <li>Tidak ada bahasa pemrograman kompleks</li>
+      <li>Mudah dipelajari</li>
+    </ul>
+  </li>
+  <li><strong>Cepat</strong>
+    <ul>
+      <li>Website statis lebih cepat loading</li>
+      <li>Tidak memerlukan proses server-side</li>
+      <li>Hosting lebih mudah</li>
+    </ul>
+  </li>
+  <li><strong>Aman</strong>
+    <ul>
+      <li>Tidak ada database yang bisa diretas</li>
+      <li>Tidak ada sistem login yang rentan</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="instalasi-ruby-dan-jekyll">Instalasi Ruby dan Jekyll</h2>
+
+<p>Berikut langkah-langkah untuk menginstal Ruby dan Jekyll di berbagai sistem operasi:</p>
+
+<h3 id="1-instalasi-ruby">1. Instalasi Ruby</h3>
+<h4 id="a-windows">a) Windows</h4>
+<ol>
+  <li>Unduh dan instal <a href="https://rubyinstaller.org/">RubyInstaller</a>.</li>
+  <li>Pilih versi yang menyertakan DevKit.</li>
+  <li>
+    <p>Setelah instalasi, buka Command Prompt dan jalankan:</p>
+
+    <p>ruby -v</p>
+
+    <p>markdown
+Copy
+Edit
+untuk memastikan Ruby telah terinstal.</p>
+  </li>
+</ol>
+
+<h4 id="b-macos">b) macOS</h4>
+<ol>
+  <li>Gunakan Homebrew untuk menginstal Ruby:
+brew install ruby
+markdown
+Copy
+Edit</li>
+  <li>
+    <p>Cek versi Ruby dengan:
+ruby -v</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+</ol>
+
+<h4 id="c-linux-ubuntudebian">c) Linux (Ubuntu/Debian)</h4>
+<ol>
+  <li>
+    <p>Jalankan perintah berikut di terminal:
+sudo apt update sudo apt install ruby-full</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+  <li>
+    <p>Verifikasi instalasi dengan:
+ruby -v</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+</ol>
+
+<h3 id="2-instalasi-jekyll">2. Instalasi Jekyll</h3>
+<ol>
+  <li>
+    <p>Setelah Ruby terinstal, jalankan perintah berikut untuk menginstal Jekyll dan Bundler:
+gem install jekyll bundler</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+  <li>
+    <p>Pastikan Jekyll telah terinstal dengan:
+jekyll -v</p>
+  </li>
+</ol>
+
+<p>shell
+Copy
+Edit</p>
+
+<h3 id="3-membuat-dan-menjalankan-proyek-jekyll">3. Membuat dan Menjalankan Proyek Jekyll</h3>
+<ol>
+  <li>
+    <p>Buat proyek baru dengan Jekyll:
+jekyll new my-website</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+  <li>
+    <p>Masuk ke direktori proyek:
+cd my-website</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+  <li>
+    <p>Jalankan server Jekyll:
+bundle exec jekyll serve</p>
+
+    <p>markdown
+Copy
+Edit</p>
+  </li>
+  <li>
+    <p>Buka browser dan akses <code class="language-plaintext highlighter-rouge">http://localhost:4000</code> untuk melihat hasilnya.</p>
+  </li>
+</ol>
+
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>Ruby dan Jekyll adalah kombinasi yang kuat untuk membuat website statis yang cepat, aman, dan mudah di-host. Dengan langkah-langkah di atas, Anda dapat dengan mudah memulai proyek Jekyll dan mengelola website statis Anda.</p>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan tentang Instalasi Ruby dan Jekyll]]></summary></entry></feed>

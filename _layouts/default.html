@@ -5,10 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
     <style>
+        /* font */
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
         </style>
     <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
+    <!-- css -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+
+    <!-- javascript -->
+     <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+    <!-- plugins -->
+     {% feed_meta %}
+     {% seo %}
 </head>
 <body>
     {% include navigation.html %}
