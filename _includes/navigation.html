@@ -1,11 +1,17 @@
 <nav>
     {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.title == item.name or (page.url == item.link) %}class="current"{% endif %}>
+    <a href="{{ item.link }}" {% if page.url contains item.link and item.link != '/' or page.url == item.link %}class="current"{% endif %}>
         {{ item.name }}
     </a>
     {% endfor %}
+    
+    <label class="theme-switch">
+        <input type="checkbox" class="checkbox" onclick="toggleTheme()">
+        <div class="container">
+            <div class="circle-container"></div>
+        </div>
+    </label>
 </nav>
-
 <!-- <nav>
     {% for item in site.data.navigation %}
     <a href="{{item.link}}"{% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>

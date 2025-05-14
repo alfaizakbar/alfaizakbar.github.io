@@ -9,6 +9,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
         </style>
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="/assets/css/styles.css">
 
@@ -38,7 +41,7 @@
         HOME
     </a>
     
-    <a href="/friends.html" class="current">
+    <a href="/friends.html" >
         FRIENDS
     </a>
     
@@ -46,8 +49,14 @@
         BLOG
     </a>
     
+    
+    <label class="theme-switch">
+        <input type="checkbox" class="checkbox" onclick="toggleTheme()">
+        <div class="container">
+            <div class="circle-container"></div>
+        </div>
+    </label>
 </nav>
-
 <!-- <nav>
     
     <a href="/">HOME</a>
@@ -108,5 +117,34 @@
             nav.classList.remove('scrolled');
         }
     });
+
+    function toggleTheme() {
+        const body = document.body;
+        const checkbox = document.querySelector('.checkbox');
+        
+        if (checkbox.checked) {
+            body.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            body.removeAttribute('data-theme');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+
+    // Check saved theme
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'light') {
+            document.body.setAttribute('data-theme', 'light');
+            document.querySelector('.checkbox').checked = true;
+        }
+    });
+
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        const hamburger = document.querySelector('.hamburger');
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
     </script>
 </html>

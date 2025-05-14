@@ -1,4 +1,192 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-07T21:12:32+07:00</updated><id>http://localhost:4000/feed.xml</id><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><entry><title type="html">Config.YML</title><link href="http://localhost:4000/2025/04/18/config-yml" rel="alternate" type="text/html" title="Config.YML" /><published>2025-04-18T00:00:00+07:00</published><updated>2025-04-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/18/config-yml</id><content type="html" xml:base="http://localhost:4000/2025/04/18/config-yml"><![CDATA[<h2 id="penjelasan-configyml">Penjelasan Config.yml</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-15T00:06:05+07:00</updated><id>http://localhost:4000/feed.xml</id><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><entry><title type="html">Scss dan Sass</title><link href="http://localhost:4000/2025/05/07/SCSS-dan-SASS" rel="alternate" type="text/html" title="Scss dan Sass" /><published>2025-05-07T00:00:00+07:00</published><updated>2025-05-07T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/07/SCSS-dan-SASS</id><content type="html" xml:base="http://localhost:4000/2025/05/07/SCSS-dan-SASS"><![CDATA[<h2 id="penjelasan-scss-dan-sass">Penjelasan Scss dan Sass</h2>
+
+<p>Scss dan Sass adalah dua bahasa pemrograman yang digunakan dalam pengembangan website. Berikut adalah penjelasan lengkapnya:</p>
+
+<h3 id="apa-itu-sass">Apa itu Sass?</h3>
+
+<p>Sass (Syntactically Awesome Style Sheets) adalah preprocessor CSS yang memungkinkan penggunaan fitur yang tidak tersedia di CSS biasa. Sass menggunakan sintaks yang lebih sederhana dan tidak menggunakan kurung kurawal atau titik koma.</p>
+
+<p>Contoh sintaks Sass:</p>
+<div class="language-sass highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">nav</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="no">black</span>
+  <span class="nt">ul</span>
+    <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span>
+    <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span>
+  <span class="nt">li</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span>
+</code></pre></div></div>
+
+<h3 id="fitur-utama-sassscss">Fitur Utama Sass/SCSS</h3>
+
+<ol>
+  <li>
+    <p>Variabel</p>
+
+    <ul>
+      <li>Menyimpan nilai yang dapat digunakan kembali</li>
+      <li>Memudahkan perubahan nilai secara konsisten</li>
+    </ul>
+  </li>
+  <li>
+    <p>Nesting</p>
+
+    <ul>
+      <li>Penulisan selector bersarang</li>
+      <li>Membuat kode lebih terstruktur dan mudah dibaca</li>
+    </ul>
+  </li>
+  <li>
+    <p>Mixins</p>
+
+    <ul>
+      <li>Membuat potongan CSS yang dapat digunakan ulang</li>
+      <li>Mendukung parameter untuk fleksibilitas</li>
+    </ul>
+  </li>
+  <li>
+    <p>Import</p>
+
+    <ul>
+      <li>Memecah kode menjadi file-file terpisah</li>
+      <li>Memudahkan pengelolaan kode</li>
+    </ul>
+  </li>
+  <li>
+    <p>Operasi Matematika</p>
+
+    <ul>
+      <li>Melakukan perhitungan dalam CSS</li>
+      <li>Membuat nilai yang dinamis</li>
+    </ul>
+  </li>
+  <li>
+    <p>Functions</p>
+
+    <ul>
+      <li>Manipulasi warna</li>
+      <li>Perhitungan kompleks</li>
+      <li>Logika pemrograman
+        <h3 id="keuntungan-menggunakan-sassscss">Keuntungan Menggunakan Sass/SCSS</h3>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Maintainability</p>
+
+    <ul>
+      <li>Kode lebih terorganisir</li>
+      <li>Lebih mudah dikelola untuk proyek besar</li>
+    </ul>
+  </li>
+  <li>
+    <p>Reusability</p>
+
+    <ul>
+      <li>Komponen dapat digunakan ulang</li>
+      <li>Mengurangi duplikasi kode</li>
+    </ul>
+  </li>
+  <li>
+    <p>Efisiensi</p>
+
+    <ul>
+      <li>Menulis CSS lebih cepat</li>
+      <li>Kode lebih ringkas</li>
+    </ul>
+  </li>
+  <li>
+    <p>Kompatibilitas</p>
+
+    <ul>
+      <li>Hasil akhir tetap berupa CSS standar</li>
+      <li>Didukung semua browser</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="kapan-menggunakan-sass-vs-scss">Kapan Menggunakan Sass vs SCSS?</h3>
+
+<ul>
+  <li>Sass : Cocok untuk proyek kecil atau jika menginginkan sintaks yang sangat minimal</li>
+  <li>SCSS : Lebih populer dan cocok untuk proyek besar karena sintaksnya mirip CSS</li>
+</ul>
+
+<h3 id="cara-menggunakan">Cara Menggunakan</h3>
+
+<ol>
+  <li>Install preprocessor Sass</li>
+  <li>Buat file .sass atau .scss</li>
+  <li>Compile ke CSS menggunakan command line atau build tools</li>
+  <li>Gunakan file CSS hasil kompilasi di website
+Sass dan SCSS telah menjadi standar industri dalam pengembangan web modern, membantu developer menulis CSS dengan lebih efisien dan terstruktur.</li>
+</ol>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan Scss dan Sass]]></summary></entry><entry><title type="html">Plugin</title><link href="http://localhost:4000/2025/04/24/plugin" rel="alternate" type="text/html" title="Plugin" /><published>2025-04-24T00:00:00+07:00</published><updated>2025-04-24T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/24/plugin</id><content type="html" xml:base="http://localhost:4000/2025/04/24/plugin"><![CDATA[<h2 id="penjelasan-plugin">Penjelasan Plugin</h2>
+
+<p>Plugin (atau add-on/extension) adalah komponen perangkat lunak yang menambahkan fitur khusus ke dalam program yang sudah ada. Berikut yang perlu Anda ketahui tentang plugin:</p>
+
+<h2 id="apa-itu-plugin">Apa itu Plugin?</h2>
+
+<p>Plugin adalah bagian dari perangkat lunak yang meningkatkan atau memperluas fungsi dari aplikasi utama. Plugin bekerja seperti program kecil yang “ditancapkan” ke dalam aplikasi yang lebih besar untuk menambah fitur atau kemampuan baru.</p>
+
+<h2 id="jenis-jenis-plugin-umum">Jenis-jenis Plugin Umum</h2>
+
+<ol>
+  <li><strong>Plugin Browser</strong>
+    <ul>
+      <li>Pemblokir iklan</li>
+      <li>Pengelola kata sandi</li>
+      <li>Penerjemah bahasa</li>
+      <li>Pengubah tema</li>
+    </ul>
+  </li>
+  <li><strong>Plugin CMS</strong>
+    <ul>
+      <li>Plugin WordPress</li>
+      <li>Aplikasi Shopify</li>
+      <li>Ekstensi Joomla</li>
+      <li>Modul Drupal</li>
+    </ul>
+  </li>
+  <li><strong>Alat Pengembangan</strong>
+    <ul>
+      <li>Plugin IDE</li>
+      <li>Ekstensi editor kode</li>
+      <li>Integrasi kontrol versi</li>
+      <li>Framework pengujian</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="manfaat-menggunakan-plugin">Manfaat Menggunakan Plugin</h2>
+
+<ul>
+  <li><strong>Kustomisasi</strong>: Menyesuaikan aplikasi dengan kebutuhan spesifik</li>
+  <li><strong>Fleksibilitas</strong>: Menambah atau menghapus fitur sesuai kebutuhan</li>
+  <li><strong>Efisiensi</strong>: Memperluas fungsi tanpa mengubah kode inti</li>
+  <li><strong>Dukungan Komunitas</strong>: Akses ke solusi yang dikembangkan komunitas</li>
+  <li><strong>Hemat Biaya</strong>: Lebih murah dibanding pengembangan khusus</li>
+</ul>
+
+<h2 id="praktik-terbaik">Praktik Terbaik</h2>
+
+<ol>
+  <li>Hanya memasang plugin yang diperlukan</li>
+  <li>Selalu perbarui plugin</li>
+  <li>Gunakan sumber terpercaya</li>
+  <li>Pantau dampak terhadap kinerja</li>
+  <li>Pemeliharaan dan pembersihan rutin</li>
+</ol>
+
+<h2 id="pertimbangan-keamanan">Pertimbangan Keamanan</h2>
+
+<ul>
+  <li>Selalu verifikasi sumber plugin</li>
+  <li>Perbarui plugin untuk patch keamanan</li>
+  <li>Tinjau izin yang diminta</li>
+  <li>Pantau perilaku plugin</li>
+  <li>Hapus plugin yang tidak digunakan</li>
+</ul>
+
+<p>Perlu diingat bahwa meskipun plugin dapat sangat meningkatkan fungsionalitas, terlalu banyak plugin dapat memperlambat kinerja dan menciptakan kerentanan keamanan. Pilih plugin dengan bijak dan lakukan pemeliharaan secara teratur.</p>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan Plugin]]></summary></entry><entry><title type="html">Config.YML</title><link href="http://localhost:4000/2025/04/18/config-yml" rel="alternate" type="text/html" title="Config.YML" /><published>2025-04-18T00:00:00+07:00</published><updated>2025-04-18T00:00:00+07:00</updated><id>http://localhost:4000/2025/04/18/config-yml</id><content type="html" xml:base="http://localhost:4000/2025/04/18/config-yml"><![CDATA[<h2 id="penjelasan-configyml">Penjelasan Config.yml</h2>
 
 <p>File config.yml berfungsi sebagai sumber konfigurasi utama yang memuat informasi penting mengenai situs web yang akan ditampilkan. File ini memungkinkan pemisahan antara data dan tampilan (template), sehingga mempermudah proses pengelolaan dan pembaruan konten tanpa harus mengubah struktur HTML secara langsung.</p>
 

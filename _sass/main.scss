@@ -1,6 +1,50 @@
-*{
+:root {
+    // --bg-color: #000000;
+    --text-color: #ffffff;
+    --accent-color: #4aa3df;
+    --bg-opacity: rgba(0, 0, 0, 0.3);
+    --nav-text: #ffffff;
+    --post-bg: rgba(0, 0, 0, 0.3);
+    --date-color: #888;
+    --bg-image:url('/assets/images/bg-ireng.png');
+    --scrolled-bg: rgba(0, 0, 0, 0.9);
+    --nav-bg: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme="light"] {
+    // --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #4aa3df;
+    --bg-opacity: rgba(255, 255, 255, 0.9);
+    --nav-text: #000000;
+    --post-bg: rgba(0, 0, 0, 0.05);
+    --date-color: #555;
+    --bg-image:url('/assets/images/bg-putih.png');
+    --scrolled-bg: rgba(255, 255, 255, 0.9);
+    --nav-bg: rgba(255, 255, 255, 0.5);
+}
+
+// Update existing color references
+nav a { color: var(--nav-text); }
+.hero-content { color: var(--text-color); }
+.post-content { color: var(--text-color); }
+.post-excerpt { color: var(--text-color); }
+.post-wrapper { background: var(--post-bg); }
+.blog-item { background: var(--post-bg); }
+.post-date { color: var(--date-color); }
+.friends-list a { color: var(--text-color); }
+
+* {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 // Add this at the top of the file with other global styles
 @keyframes fadeIn {
@@ -15,9 +59,8 @@
 .hero-content {
     max-width: 1200px;
     margin-right: 5rem; 
-    color: white;
     text-align: right;  
-    font-family: "Merriweather", serif;
+    // font-family: "Merriweather", serif;
     animation: fadeIn 1s ease-out;
 }
 
@@ -50,22 +93,47 @@
 
 // Navigation
 nav {
-    background: transparent;
+    background: var(--nav-bg);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     padding: 1.5rem;
-    transition: background 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 1rem;
+        
+        span {
+            width: 25px;
+            height: 3px;
+            background: var(--nav-text);
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+    }
+}
     
     a {
-        font-family: "Merriweather", serif;
-        color: white;
+        // font-family: "Merriweather", serif;
         margin: 0 1rem;
         font-size: 1.1rem;
         transition: color 0.3s ease;
         text-decoration: none;
         position: relative;  // Add this
+        font-weight: bold;
         
         &::after {
             content: '';
@@ -85,10 +153,11 @@ nav {
                 width: 100%;
             }
         }
-    }
     
     &.scrolled {
-        background: rgba(0, 0, 0, 0.9);
+        background: var(--scrolled-bg);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid var(--nav-border);
     }
 }
 
@@ -96,9 +165,51 @@ nav {
     color: #4aa3df !important;
 }
 
+.theme-switch {
+    --toggle-width: 50px;
+    --toggle-height: 25px;
+    margin-left: auto;  // Mendorong tombol ke ujung kanan
+    margin-right: 2rem; // Jarak dari ujung kanan
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    display: none;
+}
+
+.container {
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    background: #333;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.circle-container {
+    width: var(--toggle-height);
+    height: var(--toggle-height);
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.checkbox:checked + .container {
+    background: #f0f0f0;
+}
+
+.checkbox:checked + .container .circle-container {
+    left: calc(var(--toggle-width) - var(--toggle-height));
+    background: #333;
+}
 // Halaman Index
 .hero-container {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0, 0, 0, 0.531)), url('/assets/images/Classic\ Black\ Abstract\ Background\,\ Wallpaper\,\ Black\,\ Powerpoint\ Background\ Image\ And\ Wallpaper\ for\ Free\ Download.jpeg');
+    background: var(--bg-image);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -111,7 +222,6 @@ nav {
 .hero-content {
     max-width: 1200px;
     margin-right: 5rem; 
-    color: white;
     text-align: right;  
     font-family: "Merriweather", serif;
 }
@@ -155,6 +265,7 @@ nav {
 }
 
 @media (max-width: 768px) {
+    
     .name {
         font-size: 2.5rem;
     }
@@ -311,7 +422,6 @@ nav {
     }
 
     a {
-        color: white;
         text-decoration: none;
         transition: color 0.3s ease;
         
