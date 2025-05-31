@@ -11,17 +11,17 @@
     --nav-bg: rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="light"] {
-    --text-color: #000000;
-    --accent-color: #4aa3df;
-    --bg-opacity: rgba(255, 255, 255, 0.9);
-    --nav-text: #000000;
-    --post-bg: rgba(0, 0, 0, 0.05);
-    --date-color: #555;
-    --bg-image:url('/assets/images/bg-putih.png');
-    --scrolled-bg: rgba(255, 255, 255, 0.9);
-    --nav-bg: rgba(255, 255, 255, 0.5);
-}
+// [data-theme="light"] {
+//     --text-color: #000000;
+//     --accent-color: #4aa3df;
+//     --bg-opacity: rgba(255, 255, 255, 0.9);
+//     --nav-text: #000000;
+//     --post-bg: rgba(0, 0, 0, 0.05);
+//     --date-color: #555;
+//     --bg-image:url('/assets/images/bg-putih.png');
+//     --scrolled-bg: rgba(255, 255, 255, 0.9);
+//     --nav-bg: rgba(255, 255, 255, 0.5);
+// }
 
 // Update existing color references
 nav a { color: var(--nav-text); }
