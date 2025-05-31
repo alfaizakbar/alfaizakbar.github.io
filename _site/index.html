@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>HOME</title>
     <style>
         /* font */
         @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
@@ -20,17 +20,17 @@
     <!-- plugins -->
      <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
      <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>home</title>
+<title>HOME</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="home" />
+<meta property="og:title" content="HOME" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="home" />
+<meta property="twitter:title" content="HOME" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"home","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"WebSite","headline":"HOME","url":"http://localhost:4000/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -50,12 +50,10 @@
     </a>
     
     
-    <label class="theme-switch">
+    <!-- <label class="switch">
         <input type="checkbox" class="checkbox" onclick="toggleTheme()">
-        <div class="container">
-            <div class="circle-container"></div>
-        </div>
-    </label>
+        <span class="slider"></span>
+    </label> -->
 </nav>
 <!-- <nav>
     
@@ -71,18 +69,23 @@
         <div class="hero-content">
             <h2 class="greeting">Hi there, my name is</h2>
             <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1> 
-            <p class="tagline"><span class="typed-text"></span></p>
-
+            <p class="tagline"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
 
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
-    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer","Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak","Cita Cita saya Ingin Menjadi Programmer","Hobi saya Ngoding"];
+    const cursorSpan = document.querySelector(".cursor");
+    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer", 
+                    "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak",
+                    "Cita Cita saya Ingin Menjadi Programmer",
+                    "Hobi saya Ngoding"];
 
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+    let isEnd = false;
 
     function type() {
+        isEnd = false;
         const currentPhrase = phrases[phraseIndex];
 
         if (isDeleting) {
@@ -93,20 +96,48 @@
             charIndex++;
         }
 
+        // Add blinking cursor
+        cursorSpan.classList.toggle('typing');
+
+        let typeSpeed = isDeleting ? 40 : 60;
+
         if (!isDeleting && charIndex === currentPhrase.length) {
+            isEnd = true;
             isDeleting = true;
-            setTimeout(type, 1000);
+            typeSpeed = 4000;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
-            setTimeout(type, 300);
-        } else {
-            setTimeout(type, isDeleting ? 50 : 100);
+            typeSpeed = 2000;
         }
+
+        setTimeout(type, typeSpeed);
     }
 
     window.onload = type;
 </script>
+
+<style>
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: #4aa3df;
+        margin-left: 2px;
+        animation: blink 1s infinite;
+    }
+
+    .cursor.typing {
+        animation: none;
+    }
+
+    @keyframes blink {
+        0% { background-color: #4aa3df; }
+        49% { background-color: #4aa3df; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100% { background-color: #4aa3df; }
+    }
+</style>
         </div>
     </div>
 </body>

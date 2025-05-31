@@ -101,8 +101,8 @@ nav {
     transition: all 0.3s ease;
     backdrop-filter: blur(8px);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    // justify-content: space-between;
+    // align-items: center;
 
     .hamburger {
         display: none;
@@ -223,6 +223,7 @@ nav {
     margin-right: 5rem; 
     text-align: right;  
     font-family: "Merriweather", serif;
+    // background-color: #4aa3df;
 }
 
 .greeting {
@@ -506,4 +507,59 @@ nav {
             max-width: 100%;
         }
     }
+}
+
+// Remove or comment out the old theme-switch styles
+// .theme-switch, .checkbox, .container, .circle-container styles...
+
+// Add new theme switch styles
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    --background: #000000;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    transition: .5s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 50%;
+    left: 10%;
+    bottom: 15%;
+    box-shadow: inset 8px -4px 0px 0px #4aa3df;
+    background: var(--background);
+    transition: .5s;
+}
+
+input:checked + .slider {
+    background-color: #ffffff;
+}
+
+input:checked + .slider:before {
+    transform: translateX(100%);
+    box-shadow: inset 15px -4px 0px 15px #fff000;
 }

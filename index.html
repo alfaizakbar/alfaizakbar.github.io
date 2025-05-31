@@ -1,23 +1,28 @@
 ---
 layout: default
-title: home
+title: HOME
 ---
     <div class="hero-container">
         <div class="hero-content">
             <h2 class="greeting">Hi there, my name is</h2>
             <h1 class="name">AL FAIZ AKBAR <span class="last_name">THAIB</span></h1> 
-            <p class="tagline"><span class="typed-text"></span></p>
-
+            <p class="tagline"><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
 
 <script>
     const typedTextSpan = document.querySelector(".typed-text");
-    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer","Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak","Cita Cita saya Ingin Menjadi Programmer","Hobi saya Ngoding"];
+    const cursorSpan = document.querySelector(".cursor");
+    const phrases = ["Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer", 
+                    "Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak",
+                    "Cita Cita saya Ingin Menjadi Programmer",
+                    "Hobi saya Ngoding"];
 
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
+    let isEnd = false;
 
     function type() {
+        isEnd = false;
         const currentPhrase = phrases[phraseIndex];
 
         if (isDeleting) {
@@ -28,20 +33,48 @@ title: home
             charIndex++;
         }
 
+        // Add blinking cursor
+        cursorSpan.classList.toggle('typing');
+
+        let typeSpeed = isDeleting ? 40 : 60;
+
         if (!isDeleting && charIndex === currentPhrase.length) {
+            isEnd = true;
             isDeleting = true;
-            setTimeout(type, 1000);
+            typeSpeed = 4000;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
-            setTimeout(type, 300);
-        } else {
-            setTimeout(type, isDeleting ? 50 : 100);
+            typeSpeed = 2000;
         }
+
+        setTimeout(type, typeSpeed);
     }
 
     window.onload = type;
 </script>
+
+<style>
+    .cursor {
+        display: inline-block;
+        width: 3px;
+        background-color: #4aa3df;
+        margin-left: 2px;
+        animation: blink 1s infinite;
+    }
+
+    .cursor.typing {
+        animation: none;
+    }
+
+    @keyframes blink {
+        0% { background-color: #4aa3df; }
+        49% { background-color: #4aa3df; }
+        50% { background-color: transparent; }
+        99% { background-color: transparent; }
+        100% { background-color: #4aa3df; }
+    }
+</style>
         </div>
     </div>
 </body>
