@@ -5,7 +5,7 @@
   --nav-text: #ffffff;
   --post-bg: rgba(0, 0, 0, 0.3);
   --date-color: #888;
-  --bg-image:url("/assets/images/bg-ireng.png");
+  --bg-image: url("/assets/images/bg-ireng.png");
   --scrolled-bg: rgba(0, 0, 0, 0.9);
   --nav-bg: rgba(0, 0, 0, 0.5);
 }
@@ -514,3 +514,5 @@ input:checked + .slider:before {
   transform: translateX(100%);
   box-shadow: inset 15px -4px 0px 15px #fff000;
 }
+
+/*# sourceMappingURL=styles.css.map */

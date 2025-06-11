@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Alert</title>
+    <style>
+        /* font */
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+        </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <!-- javascript -->
+     <script src="/assets/js/scripts.js"></script>
+    <!-- plugins -->
+     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" />
+     <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Sweet Alert</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Sweet Alert" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SweetAlert2: Library Alert Modern yang Interaktif" />
+<meta property="og:description" content="SweetAlert2: Library Alert Modern yang Interaktif" />
+<link rel="canonical" href="http://localhost:4000/2025/06/11/sweet-alert" />
+<meta property="og:url" content="http://localhost:4000/2025/06/11/sweet-alert" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-11T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Sweet Alert" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-11T00:00:00+07:00","datePublished":"2025-06-11T00:00:00+07:00","description":"SweetAlert2: Library Alert Modern yang Interaktif","headline":"Sweet Alert","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/06/11/sweet-alert"},"url":"http://localhost:4000/2025/06/11/sweet-alert"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <nav>
+    
+    <a href="/" >
+        HOME
+    </a>
+    
+    <a href="/friends.html" >
+        FRIENDS
+    </a>
+    
+    <a href="/blog.html" >
+        BLOG
+    </a>
+    
+</nav>
+
+    <div class="hero-container post-container">
+    <div class="hero-content post-content">
+        <div class="blog-item" style="margin-top: 100px;">
+            <h2>Sweet Alert</h2>
+            <div class="post-date">June 11, 2025</div>
+            <div class="post-content">
+                <h2 id="sweetalert2-library-alert-modern-yang-interaktif">SweetAlert2: Library Alert Modern yang Interaktif</h2>
+
+<h2 id="-pengenalan">📌 Pengenalan</h2>
+<p>SweetAlert2 adalah library JavaScript untuk membuat alert/notifikasi yang lebih indah dan interaktif dibanding <code class="language-plaintext highlighter-rouge">alert()</code> bawaan browser.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Swal</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">sweetalert2</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<h3 id="-fitur-utama">🌟 Fitur Utama</h3>
+<p>Desain Modern - Animasi dan UI yang menarik</p>
+
+<p>Kustomisasi Tinggi - Warna, icon, tombol, dll</p>
+
+<p>Responsif - Tampilan optimal di semua device</p>
+
+<p>Promise-based - Mudah menangani interaksi user</p>
+
+<p>🚀 Cara Penggunaan Dasar</p>
+<ol>
+  <li>Installasi
+Via npm:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>sweetalert2
+</code></pre></div>    </div>
+    <p>atau CDN:</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"DN:
+```html
+&lt;script src="</span><span class="na">URL_ADDRESS.jsdelivr.net</span><span class="err">/</span><span class="na">npm</span><span class="err">/</span><span class="na">sweetalert2</span><span class="err">@11"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Alert Sederhana
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, World!</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Alert dengan Konfigurasi
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Error!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Terjadi kesalahan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">OK</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div>    </div>
+    <h3 id="-jenis-alert">🎨 Jenis Alert</h3>
+  </li>
+</ol>
+
+<h4 id="basic-alert">Basic Alert</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">(</span><span class="dl">'</span><span class="s1">Proses berhasil!</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="alert-dengan-icon">Alert dengan Icon</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Good job!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Data tersimpan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="confirm-dialog">Confirm Dialog</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Yakin ingin menghapus?</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">warning</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showCancelButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">confirmButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#3085d6</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">cancelButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#d33</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Ya, hapus!</span><span class="dl">'</span>
+<span class="p">}).</span><span class="nf">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">isConfirmed</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Kode untuk hapus data</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="input-form">Input Form</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Masukkan email</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">input</span><span class="p">:</span> <span class="dl">'</span><span class="s1">email</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">inputPlaceholder</span><span class="p">:</span> <span class="dl">'</span><span class="s1">alamat@email.com</span><span class="dl">'</span>
+<span class="p">}).</span><span class="nf">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Email:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<h3 id="️-konfigurasi-lanjutan">⚙️ Konfigurasi Lanjutan</h3>
+<h4 id="custom-html">Custom HTML</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;strong&gt;HTML&lt;/strong&gt; &lt;u&gt;example&lt;/u&gt;</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">info</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">html</span><span class="p">:</span> <span class="dl">'</span><span class="s1">You can use &lt;b&gt;bold text&lt;/b&gt;, </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">&lt;a href="//sweetalert2.github.io"&gt;links&lt;/a&gt; </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">and other HTML tags</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showCloseButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">showCancelButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">focusConfirm</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="timer-auto-close">Timer Auto-close</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top-end</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Data tersimpan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showConfirmButton</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">timer</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="toast-notification">Toast Notification</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Toast</span> <span class="o">=</span> <span class="nx">Swal</span><span class="p">.</span><span class="nf">mixin</span><span class="p">({</span>
+  <span class="na">toast</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top-end</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showConfirmButton</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">timer</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+  <span class="na">timerProgressBar</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">didOpen</span><span class="p">:</span> <span class="p">(</span><span class="nx">toast</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">toast</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseenter</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Swal</span><span class="p">.</span><span class="nx">stopTimer</span><span class="p">)</span>
+    <span class="nx">toast</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseleave</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Swal</span><span class="p">.</span><span class="nx">resumeTimer</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="nx">Toast</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Berhasil menyimpan</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="-kustomisasi-tampilan">🎨 Kustomisasi Tampilan</h3>
+<h4 id="mengubah-warna">Mengubah Warna</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Custom warna</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#FF0000</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">background</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#FFF</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="custom-icon">Custom Icon</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Custom Icon</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">iconHtml</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;i class="fas fa-heart"&gt;&lt;/i&gt;</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<h3 id="-referensi">🔗 Referensi</h3>
+<p>Dokumentasi Resmi</p>
+
+<p>GitHub Repository</p>
+
+<p>Contoh Live Demo</p>
+
+<h3 id="-tips">💡 Tips</h3>
+<p>Gunakan allowOutsideClick: false untuk mencegah alert ditutup dengan klik diluar</p>
+
+<p>Tambahkan backdrop: false untuk menghilangkan overlay gelap</p>
+
+<p>Untuk animasi khusus, gunakan showClass dan hideClass</p>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+</html>

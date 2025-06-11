@@ -49,21 +49,7 @@
         BLOG
     </a>
     
-    
-    <!-- <label class="switch">
-        <input type="checkbox" class="checkbox" onclick="toggleTheme()">
-        <span class="slider"></span>
-    </label> -->
 </nav>
-<!-- <nav>
-    
-    <a href="/">HOME</a>
-    
-    <a href="/friends.html">FRIENDS</a>
-    
-    <a href="/blog.html">BLOG</a>
-    
-</nav> -->
 
     <div class="hero-container blog-container">
     <div class="hero-content blog-content">
@@ -120,48 +106,30 @@
 </p>
                 </div>
             
+                <div class="blog-item">
+                    <h2><a href="/2025/05/14/formspree">Formspree</a></h2>
+                    <p class="post-date">14 May 2025</p>
+                    <p class="post-excerpt"><h2 id="penjelasan-formspree">Penjelasan Formspree</h2>
+</p>
+                </div>
+            
+                <div class="blog-item">
+                    <h2><a href="/2025/06/11/php">PHP</a></h2>
+                    <p class="post-date">11 Jun 2025</p>
+                    <p class="post-excerpt"><h2 id="php-bahasa-pemrograman-server-side-yang-populer">PHP: Bahasa Pemrograman Server-Side yang Populer</h2>
+</p>
+                </div>
+            
+                <div class="blog-item">
+                    <h2><a href="/2025/06/11/sweet-alert">Sweet Alert</a></h2>
+                    <p class="post-date">11 Jun 2025</p>
+                    <p class="post-excerpt"><h2 id="sweetalert2-library-alert-modern-yang-interaktif">SweetAlert2: Library Alert Modern yang Interaktif</h2>
+</p>
+                </div>
+            
         </div>
     </div>
 </div>
     
 </body>
-<script>
-    window.addEventListener('scroll', function() {
-        const nav = document.querySelector('nav');
-        if (window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    });
-
-    function toggleTheme() {
-        const body = document.body;
-        const checkbox = document.querySelector('.checkbox');
-        
-        if (checkbox.checked) {
-            body.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light');
-        } else {
-            body.removeAttribute('data-theme');
-            localStorage.setItem('theme', 'dark');
-        }
-    }
-
-    // Check saved theme
-    document.addEventListener('DOMContentLoaded', function() {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
-            document.body.setAttribute('data-theme', 'light');
-            document.querySelector('.checkbox').checked = true;
-        }
-    });
-
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        const hamburger = document.querySelector('.hamburger');
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    }
-    </script>
 </html>

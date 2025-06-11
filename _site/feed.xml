@@ -1,4 +1,345 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-05-31T20:03:44+07:00</updated><id>http://localhost:4000/feed.xml</id><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><entry><title type="html">Scss dan Sass</title><link href="http://localhost:4000/2025/05/07/SCSS-dan-SASS" rel="alternate" type="text/html" title="Scss dan Sass" /><published>2025-05-07T00:00:00+07:00</published><updated>2025-05-07T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/07/SCSS-dan-SASS</id><content type="html" xml:base="http://localhost:4000/2025/05/07/SCSS-dan-SASS"><![CDATA[<h2 id="penjelasan-scss-dan-sass">Penjelasan Scss dan Sass</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-06-11T21:39:27+07:00</updated><id>http://localhost:4000/feed.xml</id><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><entry><title type="html">Sweet Alert</title><link href="http://localhost:4000/2025/06/11/sweet-alert" rel="alternate" type="text/html" title="Sweet Alert" /><published>2025-06-11T00:00:00+07:00</published><updated>2025-06-11T00:00:00+07:00</updated><id>http://localhost:4000/2025/06/11/-sweet-alert</id><content type="html" xml:base="http://localhost:4000/2025/06/11/sweet-alert"><![CDATA[<h2 id="sweetalert2-library-alert-modern-yang-interaktif">SweetAlert2: Library Alert Modern yang Interaktif</h2>
+
+<h2 id="-pengenalan">📌 Pengenalan</h2>
+<p>SweetAlert2 adalah library JavaScript untuk membuat alert/notifikasi yang lebih indah dan interaktif dibanding <code class="language-plaintext highlighter-rouge">alert()</code> bawaan browser.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Swal</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">sweetalert2</span><span class="dl">'</span>
+</code></pre></div></div>
+
+<h3 id="-fitur-utama">🌟 Fitur Utama</h3>
+<p>Desain Modern - Animasi dan UI yang menarik</p>
+
+<p>Kustomisasi Tinggi - Warna, icon, tombol, dll</p>
+
+<p>Responsif - Tampilan optimal di semua device</p>
+
+<p>Promise-based - Mudah menangani interaksi user</p>
+
+<p>🚀 Cara Penggunaan Dasar</p>
+<ol>
+  <li>Installasi
+Via npm:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm <span class="nb">install </span>sweetalert2
+</code></pre></div>    </div>
+    <p>atau CDN:</p>
+    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"DN:
+```html
+&lt;script src="</span><span class="na">URL_ADDRESS.jsdelivr.net</span><span class="err">/</span><span class="na">npm</span><span class="err">/</span><span class="na">sweetalert2</span><span class="err">@11"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Alert Sederhana
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">(</span><span class="dl">'</span><span class="s1">Hello, World!</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Alert dengan Konfigurasi
+    <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Error!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Terjadi kesalahan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">OK</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div>    </div>
+    <h3 id="-jenis-alert">🎨 Jenis Alert</h3>
+  </li>
+</ol>
+
+<h4 id="basic-alert">Basic Alert</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">(</span><span class="dl">'</span><span class="s1">Proses berhasil!</span><span class="dl">'</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="alert-dengan-icon">Alert dengan Icon</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Good job!</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">text</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Data tersimpan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="confirm-dialog">Confirm Dialog</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Yakin ingin menghapus?</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">warning</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showCancelButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">confirmButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#3085d6</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">cancelButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#d33</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonText</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Ya, hapus!</span><span class="dl">'</span>
+<span class="p">}).</span><span class="nf">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">isConfirmed</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Kode untuk hapus data</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="input-form">Input Form</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Masukkan email</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">input</span><span class="p">:</span> <span class="dl">'</span><span class="s1">email</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">inputPlaceholder</span><span class="p">:</span> <span class="dl">'</span><span class="s1">alamat@email.com</span><span class="dl">'</span>
+<span class="p">}).</span><span class="nf">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Email:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">result</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<h3 id="️-konfigurasi-lanjutan">⚙️ Konfigurasi Lanjutan</h3>
+<h4 id="custom-html">Custom HTML</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;strong&gt;HTML&lt;/strong&gt; &lt;u&gt;example&lt;/u&gt;</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">info</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">html</span><span class="p">:</span> <span class="dl">'</span><span class="s1">You can use &lt;b&gt;bold text&lt;/b&gt;, </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">&lt;a href="//sweetalert2.github.io"&gt;links&lt;/a&gt; </span><span class="dl">'</span> <span class="o">+</span>
+    <span class="dl">'</span><span class="s1">and other HTML tags</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showCloseButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">showCancelButton</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">focusConfirm</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="timer-auto-close">Timer Auto-close</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top-end</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Data tersimpan</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showConfirmButton</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">timer</span><span class="p">:</span> <span class="mi">1500</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="toast-notification">Toast Notification</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">Toast</span> <span class="o">=</span> <span class="nx">Swal</span><span class="p">.</span><span class="nf">mixin</span><span class="p">({</span>
+  <span class="na">toast</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">position</span><span class="p">:</span> <span class="dl">'</span><span class="s1">top-end</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">showConfirmButton</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="na">timer</span><span class="p">:</span> <span class="mi">3000</span><span class="p">,</span>
+  <span class="na">timerProgressBar</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">didOpen</span><span class="p">:</span> <span class="p">(</span><span class="nx">toast</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">toast</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseenter</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Swal</span><span class="p">.</span><span class="nx">stopTimer</span><span class="p">)</span>
+    <span class="nx">toast</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">mouseleave</span><span class="dl">'</span><span class="p">,</span> <span class="nx">Swal</span><span class="p">.</span><span class="nx">resumeTimer</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="nx">Toast</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">icon</span><span class="p">:</span> <span class="dl">'</span><span class="s1">success</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Berhasil menyimpan</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h3 id="-kustomisasi-tampilan">🎨 Kustomisasi Tampilan</h3>
+<h4 id="mengubah-warna">Mengubah Warna</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Custom warna</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">confirmButtonColor</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#FF0000</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">background</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#000</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">color</span><span class="p">:</span> <span class="dl">'</span><span class="s1">#FFF</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+
+<h4 id="custom-icon">Custom Icon</h4>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Swal</span><span class="p">.</span><span class="nf">fire</span><span class="p">({</span>
+  <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Custom Icon</span><span class="dl">'</span><span class="p">,</span>
+  <span class="na">iconHtml</span><span class="p">:</span> <span class="dl">'</span><span class="s1">&lt;i class="fas fa-heart"&gt;&lt;/i&gt;</span><span class="dl">'</span>
+<span class="p">})</span>
+</code></pre></div></div>
+<h3 id="-referensi">🔗 Referensi</h3>
+<p>Dokumentasi Resmi</p>
+
+<p>GitHub Repository</p>
+
+<p>Contoh Live Demo</p>
+
+<h3 id="-tips">💡 Tips</h3>
+<p>Gunakan allowOutsideClick: false untuk mencegah alert ditutup dengan klik diluar</p>
+
+<p>Tambahkan backdrop: false untuk menghilangkan overlay gelap</p>
+
+<p>Untuk animasi khusus, gunakan showClass dan hideClass</p>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[SweetAlert2: Library Alert Modern yang Interaktif]]></summary></entry><entry><title type="html">PHP</title><link href="http://localhost:4000/2025/06/11/php" rel="alternate" type="text/html" title="PHP" /><published>2025-06-11T00:00:00+07:00</published><updated>2025-06-11T00:00:00+07:00</updated><id>http://localhost:4000/2025/06/11/php</id><content type="html" xml:base="http://localhost:4000/2025/06/11/php"><![CDATA[<h2 id="php-bahasa-pemrograman-server-side-yang-populer">PHP: Bahasa Pemrograman Server-Side yang Populer</h2>
+
+<h3 id="-pengertian-php">📌 Pengertian PHP</h3>
+<p><strong>PHP</strong> (Hypertext Preprocessor) adalah bahasa skrip open-source yang dirancang khusus untuk pengembangan web dan dapat disisipkan ke dalam HTML.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+  <span class="k">echo</span> <span class="s2">"Hello World!"</span><span class="p">;</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+<h3 id="-sejarah-singkat">🔍 Sejarah Singkat</h3>
+
+<p>Dibuat oleh Rasmus Lerdorf tahun 1994</p>
+
+<p>Awalnya bernama “Personal Home Page Tools”</p>
+
+<p>Sekarang menjadi “PHP: Hypertext Preprocessor” (rekursif)</p>
+
+<p>Versi terbaru: PHP 8.x (per 2023)</p>
+
+<h3 id="-karakteristik-php">🌟 Karakteristik PHP</h3>
+<p>Server-Side Scripting</p>
+
+<p>Dieksekusi di server sebelum dikirim ke browser</p>
+
+<p>Hasilnya berupa HTML biasa</p>
+
+<p>Cross-Platform</p>
+
+<p>Berjalan di Windows, Linux, macOS</p>
+
+<p>Mendukung berbagai web server (Apache, Nginx, IIS)</p>
+
+<p>Terintegrasi dengan Database</p>
+
+<p>MySQL, PostgreSQL, SQLite, Oracle, dll</p>
+
+<p>Syntax Mudah Dipelajari</p>
+
+<p>Mirip C dan Perl</p>
+
+<p>Longgar dalam penulisan tipe data</p>
+
+<h3 id="-contoh-kode-dasar">💻 Contoh Kode Dasar</h3>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+  <span class="cp">&lt;?php</span>
+    <span class="nv">$nama</span> <span class="o">=</span> <span class="s2">"John Doe"</span><span class="p">;</span>
+    <span class="nv">$umur</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+    
+    <span class="k">echo</span> <span class="s2">"Nama: </span><span class="nv">$nama</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+    <span class="k">echo</span> <span class="s2">"Umur: </span><span class="nv">$umur</span><span class="s2"> tahun"</span><span class="p">;</span>
+  <span class="cp">?&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<h3 id="️-kegunaan-php">🛠️ Kegunaan PHP</h3>
+<p>Membuat halaman web dinamis</p>
+
+<p>Mengolah form HTML</p>
+
+<p>Mengakses database</p>
+
+<p>Membuat session user</p>
+
+<p>Membuat CMS (WordPress, Drupal, Joomla)</p>
+
+<p>Membuat API</p>
+
+<h3 id="-kelebihan-php">📊 Kelebihan PHP</h3>
+<p>✅ Gratis dan open-source
+✅ Komunitas besar
+✅ Dokumentasi lengkap
+✅ Banyak framework (Laravel, Symfony, CodeIgniter)
+✅ Dukungan hosting yang luas</p>
+
+<h3 id="️-kekurangan-php">⚠️ Kekurangan PHP</h3>
+<p>❌ Tidak ketat dalam tipe data (versi lama)
+❌ Performa lebih lambat dibanding beberapa bahasa modern
+❌ Desain yang tidak konsisten di beberapa fungsi</p>
+
+<h3 id="-contoh-aplikasi-php">🚀 Contoh Aplikasi PHP</h3>
+<p>Sistem manajemen konten (WordPress)</p>
+
+<p>Aplikasi e-commerce (Magento, WooCommerce)</p>
+
+<p>Forum diskusi (phpBB)</p>
+
+<p>Sistem manajemen pembelajaran (Moodle)</p>
+
+<h3 id="-sintaks-dasar-yang-perlu-diketahui">📚 Sintaks Dasar yang Perlu Diketahui</h3>
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+  <span class="c1">// Variabel</span>
+  <span class="nv">$teks</span> <span class="o">=</span> <span class="s2">"Belajar PHP"</span><span class="p">;</span>
+  <span class="nv">$angka</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+  
+  <span class="c1">// Percabangan</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nv">$angka</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Lebih dari 50"</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Perulangan</span>
+  <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Nomor: </span><span class="nv">$i</span><span class="s2"> &lt;br&gt;"</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="c1">// Fungsi</span>
+  <span class="k">function</span> <span class="n">sapa</span><span class="p">(</span><span class="nv">$nama</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"Halo, </span><span class="nv">$nama</span><span class="s2">!"</span><span class="p">;</span>
+  <span class="p">}</span>
+  
+  <span class="k">echo</span> <span class="nf">sapa</span><span class="p">(</span><span class="s2">"Budi"</span><span class="p">);</span>
+<span class="cp">?&gt;</span>
+</code></pre></div></div>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[PHP: Bahasa Pemrograman Server-Side yang Populer]]></summary></entry><entry><title type="html">Formspree</title><link href="http://localhost:4000/2025/05/14/formspree" rel="alternate" type="text/html" title="Formspree" /><published>2025-05-14T00:00:00+07:00</published><updated>2025-05-14T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/14/formspree</id><content type="html" xml:base="http://localhost:4000/2025/05/14/formspree"><![CDATA[<h2 id="penjelasan-formspree">Penjelasan Formspree</h2>
+
+<p>Formspree adalah layanan form backend yang memungkinkan kamu mengirim data formulir HTML ke email atau endpoint lain tanpa perlu menulis kode backend sendiri (seperti PHP, Node.js, dll). Cocok untuk situs statis (seperti HTML biasa atau yang dibuat dengan Jekyll, Hugo, dll).</p>
+
+<h1 id="formspree-solusi-pengiriman-formulir-sederhana-untuk-website-statis">Formspree: Solusi Pengiriman Formulir Sederhana untuk Website Statis</h1>
+
+<h2 id="-gambaran-umum">📌 Gambaran Umum</h2>
+<p>Formspree adalah layanan pengiriman formulir berbasis web yang memungkinkan pengembang mengumpulkan data dari formulir HTML tanpa perlu menyiapkan backend atau server-side scripting. Layanan ini sangat cocok untuk:</p>
+
+<ul>
+  <li>Website statis (HTML, Jekyll, Hugo, dll)</li>
+  <li>Proyek sederhana yang tidak memerlukan sistem kompleks</li>
+  <li>Pengembang yang ingin menghemat waktu setup backend</li>
+</ul>
+
+<h2 id="-fitur-utama-formspree">🌟 Fitur Utama Formspree</h2>
+
+<h3 id="1-kemudahan-penggunaan">1. Kemudahan Penggunaan</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"https://formspree.io/f/your-form-id"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">placeholder=</span><span class="s">"Nama Anda"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"_replyto"</span> <span class="na">placeholder=</span><span class="s">"Email Anda"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">placeholder=</span><span class="s">"Pesan Anda"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Kirim Pesan<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>
+<h3 id="2-dukungan-berbagai-jenis-input">2. Dukungan Berbagai Jenis Input</h3>
+<p>Text fields</p>
+
+<p>Email inputs</p>
+
+<p>File uploads (versi berbayar)</p>
+
+<p>Checkbox dan radio buttons</p>
+
+<p>Dropdown select</p>
+
+<p>Hidden fields</p>
+
+<h3 id="3-manajemen-spam-canggih">3. Manajemen Spam Canggih</h3>
+<p>✅ reCAPTCHA integrasi
+✅ Honeypot protection
+✅ Filter spam otomatis
+✅ Domain whitelisting (versi premium)</p>
+
+<h3 id="4-opsi-pengiriman-data">4. Opsi Pengiriman Data</h3>
+<p>Email notifikasi</p>
+
+<p>Webhook (POST requests)</p>
+
+<p>Integrasi dengan Zapier</p>
+
+<p>Redirect setelah submit</p>
+
+<p>Response custom</p>
+
+<h2 id="langkah-2--implementasi-kode">Langkah 2 : Implementasi kode</h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">"https://formspree.io/f/your-unique-id"</span> <span class="na">method=</span><span class="s">"POST"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>Nama Lengkap:
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"name"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  
+  <span class="nt">&lt;label&gt;</span>Email:
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">name=</span><span class="s">"_replyto"</span> <span class="na">required</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  
+  <span class="nt">&lt;label&gt;</span>Pesan:
+    <span class="nt">&lt;textarea</span> <span class="na">name=</span><span class="s">"message"</span> <span class="na">required</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+  
+  <span class="c">&lt;!-- Honeypot anti-spam --&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"_gotcha"</span> <span class="na">style=</span><span class="s">"display:none"</span><span class="nt">&gt;</span>
+  
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>Kirim<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre></div></div>]]></content><author><name>{&quot;first_name&quot;=&gt;&quot;AL FAIZ AKBAR&quot;, &quot;last_name&quot;=&gt;&quot;THAIB&quot;, &quot;greeting&quot;=&gt;&quot;Hi there, my name is&quot;, &quot;tagline&quot;=&gt;[&quot;Saya Adalah Seorang Mahasiswa Politeknik Jurusan Teknologi Informasi dan Komputer&quot;, &quot;Saya Alumni SMKN 1 Lhokseumawe Jurusan Rekayasa Perangkat Lunak&quot;, &quot;Cita Cita saya Ingin Menjadi Programmer&quot;, &quot;Hobi saya Ngoding&quot;]}</name></author><summary type="html"><![CDATA[Penjelasan Formspree]]></summary></entry><entry><title type="html">Scss dan Sass</title><link href="http://localhost:4000/2025/05/07/SCSS-dan-SASS" rel="alternate" type="text/html" title="Scss dan Sass" /><published>2025-05-07T00:00:00+07:00</published><updated>2025-05-07T00:00:00+07:00</updated><id>http://localhost:4000/2025/05/07/SCSS-dan-SASS</id><content type="html" xml:base="http://localhost:4000/2025/05/07/SCSS-dan-SASS"><![CDATA[<h2 id="penjelasan-scss-dan-sass">Penjelasan Scss dan Sass</h2>
 
 <p>Scss dan Sass adalah dua bahasa pemrograman yang digunakan dalam pengembangan website. Berikut adalah penjelasan lengkapnya:</p>
 
